@@ -51,12 +51,13 @@ body{
 main{
     display:grid;
     gap:2rem;
-    max-width:72rem;
+    max-width:76rem;
     margin:auto;
     padding:var(--space-3);
 }
 article{
     min-width:0;
+    max-width: var(--measure);
 }
 article section{
     display:flow-root;
@@ -68,9 +69,12 @@ article section{
     padding:1rem;
     border:1px solid var(--color-border);
 }
+.story-guide h2{
+    margin-top:0;
+}
 .story-guide a{
     display:block;
-    padding:.4rem;
+    padding:.4rem 0;
 }
 .feature-figure{
     position:relative;
