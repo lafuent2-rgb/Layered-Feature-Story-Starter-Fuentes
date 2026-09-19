@@ -45,13 +45,66 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
+                        <td>Issue badge</td>
+                        <td>Identifies the story as part of Phoenix heat response information.</td>
+                        <td>The badge remains readable as text inside the feature header.</td>
+                        <td>
+                            Absolute positioning anchors the badge to the top right of the header
+                            without affecting the main page layout.
+                        </td>
+                        <td>
+                            .feature-header is positioned relative and acts as the containing block.
+                            The badge does not create a separate z-index layer.
+                        </td>
+                        <td>
+                            If positioning is removed, the badge returns to normal flow inside the header.
+                        </td>
+                        <td>
+                            Test at 320px, 768px, 1280px, and 200% zoom for overlap or clipping.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Story guide</td>
+                        <td>Lets readers move quickly between the main sections of the story.</td>
+                        <td>
+                            The guide appears in normal document flow before the article content.
+                        </td>
+                        <td>
+                            Sticky positioning is used on wider screens so the navigation stays visible
+                            while the reader moves through the article.
+                        </td>
+                        <td>
+                            The story guide stays within the main grid and uses the sticky layer token.
+                        </td>
+                        <td>
+                            Below 52rem, sticky positioning is not applied and the guide remains in normal flow.
+                        </td>
+                        <td>
+                            Test scrolling at wide viewport sizes and confirm links remain keyboard accessible.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Pull quote</td>
+                        <td>Highlights the main idea that shade is part of Phoenix's heat response strategy.</td>
+                        <td>
+                            The quote remains a normal blockquote within the article.
+                        </td>
+                        <td>
+                            Relative positioning, z-index, and a small negative inline margin create
+                            a controlled overlap on wider screens.
+                        </td>
+                        <td>
+                            The pull quote stays inside the article and uses the raised layer token.
+                        </td>
+                        <td>
+                            Below 52rem, the negative margin and raised layer are not applied,
+                            so the quote returns to normal flow.
+                        </td>
+                        <td>
+                            Test at 320px, 768px, 1280px, and 200% zoom for collisions or horizontal scrolling.
+                        </td>
                     </tr>
                 </tbody>
             </table>

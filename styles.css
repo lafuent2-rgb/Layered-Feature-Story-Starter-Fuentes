@@ -112,11 +112,13 @@ img{
         position:sticky;
         inset-block-start:1rem;
         z-index:var(--layer-sticky);
+        max-height: calc(110vh - 2rem);
+        overflow: auto;
     }
     .pull-quote{
         position:relative;
         z-index:var(--layer-raised);
-        margin-inline-start:-4rem;
+        margin-inline-start:-1rem;
         background:var(--color-surface);;
     }
     @supports (shape-outside:circle(50%)){
