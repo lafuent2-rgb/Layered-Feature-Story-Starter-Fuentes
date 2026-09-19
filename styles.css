@@ -99,6 +99,8 @@ img{
     width:min(45%,20rem);
     margin:0 1rem 1rem 0;
     border-radius:50%;
+    aspect-ratio:1;
+    object-fit: cover;
 }
 .documentation{
     grid-column:1/-1;
@@ -131,7 +133,7 @@ img{
     }
     @supports (clip-path:polygon(0 0)){
         .feature-figure img{
-            clip-path:polygon(0 0,100% 5%,94% 100%,6% 94%);}
+            clip-path:polygon(0 0,100% 3%,97% 100%,3% 97%);}
         }
         :focus-visible{
             outline:.2rem solid var(--color-accent);

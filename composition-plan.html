@@ -131,6 +131,57 @@
                             the accent does not cover content or interfere with interaction.
                         </td>
                     </tr>
+                    <tr>
+                        <td>Shape portrait</td>
+                        <td>
+                            Supports the heat relief section with a circular editorial image.
+                        </td>
+                        <td>
+                            The image remains in normal flow as a rounded image without shape wrapping.
+                        </td>
+                        <td>
+                            border-radius creates the circular image, while shape-outside is used on wider
+                            screens so surrounding text can wrap around the circle.
+                        </td>
+                        <td>
+                            The image remains inside the article section and does not require a separate
+                            stacking context.
+                        </td>
+                        <td>
+                            If shape-outside is unsupported, the circular image remains visible and the
+                            text continues in normal flow.
+                        </td>
+                        <td>
+                            Test at 320px, 768px, 1280px, and 200% zoom to confirm readable text wrapping
+                            and no content collisions.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Feature image clipping</td>
+                        <td>
+                            Gives the main story image a subtle editorial shape without hiding essential content.
+                        </td>
+                        <td>
+                            The image displays as a normal responsive rectangle when clipping is not applied.
+                        </td>
+                        <td>
+                            clip-path uses a subtle polygon shape to add visual interest while keeping the
+                            image easy to understand.
+                        </td>
+                        <td>
+                            The clipped image remains inside .feature-figure and does not create a new
+                            stacking context.
+                        </td>
+                        <td>
+                            The clip-path is inside an @supports rule. If unsupported, the image remains
+                            rectangular and fully readable.
+                        </td>
+                        <td>
+                            Test at 320px, 768px, 1280px, and 200% zoom to confirm the image is not cropped
+                            in a way that removes important information.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </body>
