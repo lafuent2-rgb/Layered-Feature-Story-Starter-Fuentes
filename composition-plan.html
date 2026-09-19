@@ -106,6 +106,31 @@
                             Test at 320px, 768px, 1280px, and 200% zoom for collisions or horizontal scrolling.
                         </td>
                     </tr>
+                    <tr>
+                        <td>Feature figure accent</td>
+                        <td>
+                            Adds a small sun like visual accent that supports the Phoenix heat theme.
+                        </td>
+                        <td>
+                            The figure and its content remain fully readable without the decorative accent.
+                        </td>
+                        <td>
+                            An absolutely positioned pseudo element is used because the accent is purely decorative
+                            and should not affect the figure's normal layout.
+                        </td>
+                        <td>
+                            .feature figure is positioned relative and acts as the containing block.
+                            The accent uses the raised layer token.
+                        </td>
+                        <td>
+                            If the pseudo element is unsupported or removed, the figure remains unchanged and readable.
+                            pointer-events:none prevents the decoration from blocking interaction.
+                        </td>
+                        <td>
+                            Test at 320px, 768px, 1280px, 200% zoom, and keyboard navigation to confirm
+                            the accent does not cover content or interfere with interaction.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </body>

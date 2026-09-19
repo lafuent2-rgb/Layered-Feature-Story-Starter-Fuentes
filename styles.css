@@ -47,6 +47,7 @@ body{
     padding:.5rem;
     background:var(--color-accent);
     color:#191919;
+    z-index: var(--layer-base);
 }
 main{
     display:grid;
@@ -135,4 +136,16 @@ img{
         :focus-visible{
             outline:.2rem solid var(--color-accent);
             outline-offset:.2rem;
+        }
+        .feature-figure::after{
+            content:"";
+            position:absolute;
+            inset-block-start:.75rem;
+            inset-inline-end:.75rem;
+            width:3rem;
+            height:3rem;
+            border-radius:50%;
+            background:var(--color-accent);
+            z-index:var(--layer-raised);
+            pointer-events:none;
         }
