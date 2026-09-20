@@ -41,13 +41,9 @@ body{
     font-size:1.25rem;
 }
 .issue-badge{
-    position:absolute;
-    inset-block-start:1rem;
-    inset-inline-end:1rem;
     padding:.5rem;
     background:var(--color-accent);
     color:#191919;
-    z-index: var(--layer-base);
 }
 main{
     display:grid;
@@ -103,26 +99,35 @@ img{
     object-fit: cover;
 }
 .documentation{
-    grid-column:1/-1;
+    max-width:76rem;
+    margin:auto;
     padding:1rem;
     background:#f1f1f1;
+    overflow-wrap:anywhere;
 }
 @media (min-width:52rem){
     main{
         grid-template-columns:14rem 1fr;
     }
+    .issue-badge{
+        position:absolute;
+        inset-block-start:1rem;
+        inset-inline-end:1rem;
+        margin-top:0;
+        z-index:var(--layer-raised);
+    }
     .story-guide{
         position:sticky;
         inset-block-start:1rem;
         z-index:var(--layer-sticky);
-        max-height: calc(110vh - 2rem);
+        max-height: calc(100vh - 2rem);
         overflow: auto;
     }
     .pull-quote{
         position:relative;
         z-index:var(--layer-raised);
         margin-inline-start:-1rem;
-        background:var(--color-surface);;
+        background:var(--color-surface);
     }
     @supports (shape-outside:circle(50%)){
         .shape-portrait{
@@ -151,3 +156,4 @@ img{
             z-index:var(--layer-raised);
             pointer-events:none;
         }
+        
